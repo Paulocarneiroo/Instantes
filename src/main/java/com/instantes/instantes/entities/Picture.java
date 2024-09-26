@@ -25,6 +25,4 @@ public class Picture {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String uri;
 
-    @ManyToMany
-    private Set<Album> albums = new HashSet<>();
 }
