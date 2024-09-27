@@ -12,13 +12,11 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -36,4 +34,10 @@ public class Album {
     @ManyToMany
     @Setter(AccessLevel.NONE)
     private Set<Picture> pictures = new HashSet<>();
+
+    public Album(Long id, User user, String title) {
+        this.id = id;
+        this.user = user;
+        this.title = title;
+    }
 }

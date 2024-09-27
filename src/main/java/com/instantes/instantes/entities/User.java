@@ -16,7 +16,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -37,4 +36,11 @@ public class User {
     @OneToMany(mappedBy = "user")
     @Setter(AccessLevel.NONE)
     private Set<Album> albums = new HashSet<>();
+
+    public User(Long id, String uriFoto, String email, String name) {
+        this.id = id;
+        this.uriFoto = uriFoto;
+        this.email = email;
+        this.name = name;
+    }
 }
