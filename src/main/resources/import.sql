@@ -4,11 +4,15 @@ INSERT INTO tb_user(name, email, uri_foto) VALUES ('Ricardo Daniel', 'ricardo@em
 INSERT INTO tb_album(title, user_id) VALUES ('pc gamer', 1)
 INSERT INTO tb_album(title, user_id) VALUES ('memes', 2)
 
-INSERT INTO tb_user_friends(friends_id, user_id) VALUES (2, 1)
-INSERT INTO tb_user_friends(friends_id, user_id) VALUES (1, 2)
+INSERT INTO tb_picture(uri) VALUES ('https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg')
+INSERT INTO tb_picture(uri) VALUES ('https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg')
+INSERT INTO tb_picture(uri) VALUES ('https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg')
+INSERT INTO tb_picture(uri) VALUES ('https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg')
+INSERT INTO tb_picture(uri) VALUES ('https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg')
 
-INSERT INTO tb_album_pictures(album_id, pictures_uri) VALUES (1, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg')
-INSERT INTO tb_album_pictures(album_id, pictures_uri) VALUES (1, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/16-big.jpg')
-INSERT INTO tb_album_pictures(album_id, pictures_uri) VALUES (1, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/17-big.jpg')
-INSERT INTO tb_album_pictures(album_id, pictures_uri) VALUES (1, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/18-big.jpg')
-INSERT INTO tb_album_pictures(album_id, pictures_uri) VALUES (1, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/19-big.jpg')
+INSERT INTO tb_album_pictures(album_id, picture_id) VALUES (1, 1)
+INSERT INTO tb_album_pictures(album_id, picture_id) VALUES (1, 2)
+INSERT INTO tb_album_pictures(album_id, picture_id) VALUES (1, 3)
+INSERT INTO tb_album_pictures(album_id, picture_id) VALUES (1, 4)
+INSERT INTO tb_album_pictures(album_id, picture_id) VALUES (1, 5)
+

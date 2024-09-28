@@ -29,10 +29,6 @@ public class User {
     private String email;
     private String uriFoto;
 
-    @ManyToMany
-    @Setter(AccessLevel.NONE)
-    private Set<User> friends = new HashSet<>();
-
     @OneToMany(mappedBy = "user")
     @Setter(AccessLevel.NONE)
     private Set<Album> albums = new HashSet<>();

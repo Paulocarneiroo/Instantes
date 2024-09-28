@@ -3,14 +3,7 @@ package com.instantes.instantes.entities;
 import java.util.HashSet;
 import java.util.Set;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,12 +25,17 @@ public class Album {
     private User user;
 
     @ManyToMany
+    @JoinTable(
+            name = "tb_album_pictures",
+            joinColumns = @JoinColumn(name = "album_id"),
+            inverseJoinColumns = @JoinColumn(name = "picture_id", referencedColumnName = "id")
+    )
     @Setter(AccessLevel.NONE)
     private Set<Picture> pictures = new HashSet<>();
 
-    public Album(Long id, User user, String title) {
+    public Album(Long id, String title, User user) {
         this.id = id;
-        this.user = user;
         this.title = title;
+        this.user = user;
     }
 }
