@@ -18,9 +18,9 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    @GetMapping(value = "/{name}")
-    public ResponseEntity<UserDto> findByName(@PathVariable String name) {
-        return ResponseEntity.ok(service.findByName(name));
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<UserDto> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.findById(id));
     }
 
     @GetMapping

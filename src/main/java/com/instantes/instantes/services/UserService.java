@@ -18,8 +18,8 @@ public class UserService{
     UserRepository repository;
 
     @Transactional(readOnly = true)
-    public UserDto findByName(String name) {
-        Optional<User> result = repository.findByName(name);
+    public UserDto findById(Long id) {
+        Optional<User> result = repository.findById(id);
         User entity = result.get();
         return new UserDto(entity);
     }
